@@ -1,2 +1,6 @@
-* cookbooks/git is now ignored.  Check in Cheffile and intstructions.
-* install mysql
+* install mysql gem: 
+
+    sudo apt-get install make
+    sudo gem install mysql
+
+* import mysql database
