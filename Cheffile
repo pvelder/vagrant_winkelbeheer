@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site "http://community.opscode.com/api/v1"
+
+cookbook "git",
+    :git => "https://github.com/fnichol/chef-git.git"
+cookbook "curl",
+    :git => "https://github.com/phlipper/chef-curl.git"
+cookbook "mysql",
+    :git => "https://github.com/opscode-cookbooks/mysql.git",
+    :ref => "2.0.0"
