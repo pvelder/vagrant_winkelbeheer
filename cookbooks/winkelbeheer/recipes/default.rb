@@ -19,7 +19,6 @@ gem_package "ec2onrails" do
   version "0.9.9.1"
 end
 
-# cd /vagrant/dvoro; cap local externals:setup 
 
 directory "#{dvoro_home}" do
   owner dvoro_user
@@ -37,10 +36,12 @@ git dvoro_home do
   action :sync
 end
 
+# cd /vagrant/dvoro; cap local externals:setup 
 bash "externals" do
   cwd "#{dvoro_home}"
   code <<-EOH
   cap local externals:setup
+  sudo gem update --system 1.4.2
   EOH
 end
 
